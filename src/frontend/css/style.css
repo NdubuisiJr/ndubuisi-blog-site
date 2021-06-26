@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    z-index: 10;
+    background: #214730;
+}
+header .logo{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+header .logo img{
+    width: 100%;
+    border-radius: 50%;
+}
+header .logo h6{
+    font-size: .4em;
+}
+header .navigation, .social-media{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0; 
+}
+header li{
+    list-style: none;
+    margin: 0 10px;
+    transition: all 2s ease-in-out;
+}
+header li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header li a:hover, .active{
+    border-bottom: 2px solid white;
+}
+header .social-media a:hover{
+    border: none;
+    font-size: 1.2rem;
+}
+header .social-media .fa{
+    color: #fff;
+}
+.banner{
+    background: #152D1E;
+    padding: 100px 100px 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.banner .content{
+    max-width: 700px;
+}
+.banner .content h2{
+    font-size: 2.5em;
+    color: #fff;
+}
+.banner .content h3{
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+.banner .content p:nth-of-type(1){
+    font-size: 1.5em;
+     margin-bottom: 10px;
+}
+.banner .content a{
+    display: inline-block;
+    background: #fff;
+    color: #434978;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.banner .image{
+   width: 400px;
+   max-width: 400px;
+   margin-left: 50px;
+}
+main {
+    background: #152D1E;
+}
+main .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+main .title h2{
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+}
+hr{
+    width: 5%;
+    height: 4px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+main .skillset, .portfolio, .contact {
+    padding: 50px; 
+}
+main .skillset h2{
+    color: #fff;
+}
+
+main .skillset .skills{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    background: #214730;
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+main .skillset .skills .skill{
+    margin: 5px 0;
+}
+main .skillset .skills .skill:first-child{
+    margin-top: 0px;
+}
+main .skillset .skills .skill .info{
+    margin-bottom: 5px;
+}
+main .skillset .skills .skill .info span{
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+main .skillset .skills .skill .progress-bar{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                      0px 1px rgba(255,255,255,0.8);
+    animation: animate-skill 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+main .skillset .skills .skill .progress-bar span{
+    height: 100%;
+    width: 80%;
+    background: #cc5500;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate-skill 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate-skill{
+    100%{
+        transform: scaleX(1);
+    }
+}
+main .skillset .skills .skill .progress-bar.html span{
+    width:85%;
+}
+main .skillset .skills .skill .progress-bar.css span{
+    width:90%;
+}
+main .skillset .skills .skill .progress-bar.js span{
+    width:55%;
+}
+main .skillset .skills .skill .progress-bar.Csharp span{
+    width:75%;
+}
+main .skillset .skills .skill .progress-bar.node span{
+    width: 100%;
+}
+main .skillset .skills .skill .progress-bar.mysql span{
+    width: 98%;
+}
+main .skillset .skills .skill .progress-bar.mongo span{
+    width: 100%;
+}
+main .skillset .skills .skill .progress-bar.xamarin span{
+    width:85%;
+}
+main .skillset .skills .skill .progress-bar span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+main .skillset .skills .skill .progress-bar span::after{
+    position: absolute;
+    right: 0;
+    top: -24px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    background: #fff;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+main .skillset .skills .skill .progress-bar.html span::after{
+    content:"85%";
+}
+main .skillset .skills .skill .progress-bar.css span::after{
+    content:"90%";
+}
+main .skillset .skills .skill .progress-bar.js span::after{
+    content:"45%";
+}
+main .skillset .skills .skill .progress-bar.Csharp span::after{
+    content:"75%";
+}
+main .skillset .skills .skill .progress-bar.node span::after{
+    content:"100%";
+}
+main .skillset .skills .skill .progress-bar.mysql span::after{
+    content:"98%";
+}
+main .skillset .skills .skill .progress-bar.mongo span::after{
+    content:"100%";
+}
+main .skillset .skills .skill .progress-bar.xamarin span::after{
+    content:"85%";
+}
+main .portfolio p{
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+main .portfolio .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+main .portfolio .projects .project{
+    padding: 20px;
+    color: #fff;
+    background: yellow;
+    margin: 10px;
+}
+main .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .contact p{
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+main .contact .form-group{
+    display: flex;
+    margin-bottom: 10px;
+}
+main .contact .form-group label{
+    width: 20%;
+    color: white;
+}
+main .contact .form-group input, textarea{
+    width: 80%;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+}
+/* main .contact .form-group input:focus{
+    outline: yellow;
+} */
+
+main .contact form input[type="submit"]{ 
+    margin-left: 20%;
+    text-align: center;
+    padding: 5px 20px;
+    color: #434978;
+    background: #fff;
+    border-radius: 5px;
+}
+main .contact form input[type="submit"]:hover{
+    cursor: pointer;
+}
+footer{
+    background: #214730;
+    border-top: 2px solid white;
+    color: #fff;
+}
+footer .footer-contents{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 20px;
+}
+footer .footer-contents a{
+    text-decoration: none;
+    color: #fff;
+}
+footer .footer-contents .logo img{
+    width:50%;
+    border-radius: 50%;
+}
+footer .footer-contents .logo h6{
+    font-size: 1em;
+}
+footer .footer-contents .quick-links{
+    /* margin-left: 150px; */
+}
+footer .footer-contents .quick-links a{
+    text-decoration: none;
+}
+footer .footer-contents .quick-links ul{
+    list-style-type: none;
+    padding: 0 10px;
+}
+footer .footer-contents .quick-links h4{
+    font-size: 1.2em;;
+   padding-bottom: 10px;
+}
+footer .footer-contents .quick-links li{
+    margin-bottom: 10px;
+}
+footer .footer-contents .quick-links li:hover{
+    color: yellow;
+}
+footer .footer-contents .social-media{
+    margin-left: 30px;
+}
+footer .footer-contents .social-media li{
+    list-style-type: none;
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+    header .logo{
+        font-size: 1.5em;
+        width: 80px;
+        height: 80px;
+        margin-bottom: .5em;
+    }
+    .banner{
+        padding: 200px 20px 50px;
+        flex-direction: column-reverse;
+        
+    }
+    .banner .image{
+        margin-left: 0;
+        margin-bottom: 20px;
+        max-width: 80%;
+    }
+    .banner .content h2{
+        font-size: 2em;
+    }
+    main .skillset .skills{
+        grid-template-columns: 1fr !important;
+    }
+    main .contact .form-group{
+        flex-direction: column;
+     }
+     main .contact .form-group label{
+         width: 100%;
+         margin-bottom: 5px;
+     }
+     main .contact .form-group input, textarea{
+         width: 100%;
+     }
+     main .contact form input[type="submit"]{ 
+        margin-left: 0;
+    }
+}
+@media (max-width: 600px){
+    .banner .image{
+        margin-top: 30px;
+    }
+    main .skillset, .portfolio, .contact {
+        padding: 20px; 
+    }
+   
+}
