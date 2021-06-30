@@ -3,6 +3,7 @@ import fs from 'fs';
 import React from 'react'; 
 import ReactDomServer from 'react-dom/server';
 import { App } from '../src/App';
+import { Home } from '../src/pages/home';
 
 const server = express(); 
 
@@ -12,8 +13,8 @@ server.get('/', (req, res)=>{
             console.log(err);
             return res.status(500).send('internal server error');
         }
-        res.send(data.replace('<div id="root"></div>',`<div id="root">
-            ${ReactDomServer.renderToString(React.createElement(App))}
+        res.send(data.replace('<div id="root"></div>',`<div id="root">  
+            ${ReactDomServer.renderToString(React.createElement(Home))}
         </div>`));
     });
 });

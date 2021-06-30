@@ -22,7 +22,7 @@ module.exports = {
       'plugin:prettier/recommended',
     ],
     rules: {
-      'indent': ['error', 4, { SwitchCase: 1 }],
+      'indent': ['error', 4],
       'linebreak-style': 'off',
       'quotes': ['error', 'single'],
       'semi': ['error', 'always'],

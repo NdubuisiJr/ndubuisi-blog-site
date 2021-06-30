@@ -1,11 +1,13 @@
 import { FunctionComponent } from "react";
-import { ClickCounter } from './components/ClickCounter';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from "./pages/home";
 
 export const App: FunctionComponent = () => {
     return(
-        <div className='app'>
-            <img src="/images/react.png" alt="react image" /> 
-            <ClickCounter/>
-        </div>  
+       <Router>
+           <Switch>
+               <Route path='/' component={Home} exact/>
+           </Switch>
+       </Router> 
     )
 };
