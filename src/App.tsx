@@ -4,18 +4,22 @@ import { Blog } from './pages/blog';
 import { Home } from './pages/home';
 import { TopNavBar } from './components/topNavBar';
 import { BlogPage } from './pages/BlogPage';
+import { NotFound } from './pages/notfound';
+import { InternalError } from './pages/internalError';
 
 export const App: FunctionComponent = () => {
-  return (
-    <Router>
-        <>
-          <TopNavBar/>
-          <Switch>
-              <Route path='/home' component={Home} exact />
-              <Route path='/blog' component={Blog} exact/>
-              <Route path='/blog' component={BlogPage} exact/>
-          </Switch>
-        </>
-    </Router>
-  );
+    return (
+        <Router>
+            <>
+                <TopNavBar />
+                <Switch>
+                    <Route path="/" component={Home} exact />
+                    <Route path="/blog" component={Blog} exact />
+                    <Route path="/error" component={InternalError} exact />
+                    <Route path="/blog/:id" component={BlogPage} exact />
+                    <Route component={NotFound} />
+                </Switch>
+            </>
+        </Router>
+    );
 };
