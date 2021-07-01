@@ -4,6 +4,8 @@ import React from 'react';
 import ReactDomServer from 'react-dom/server';
 import { Blog } from '../src/pages/blog';
 import { Home } from '../src/pages/home';
+import { ErrorLogger } from './middleware/errorLogger';
+import { NotFoundHandler } from './middleware/notfound';
 
 const server = express(); 
 
@@ -31,7 +33,9 @@ server.get('/blog', (req, res) => {
     });
 }) 
 
-server.use(express.static('build'));
+server.use(express.static('build')); 
+server.use(NotFoundHandler.Notfound());
+server.use(new ErrorLogger().Logger())
 
 server.listen(9000, ()=>{
     console.log('listening on port 9000')

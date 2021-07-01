@@ -1,12 +1,9 @@
 
 import { FunctionComponent } from 'react';
-import { TopNavBar } from '../components/topNavBar';
 
 export const Home : FunctionComponent = () => {
     return (
-        <>
-    <TopNavBar/>
-    <div className="banner"> 
+        <>    <div className="banner"> 
         <div className="content">
             <h3>Hello, I'm</h3>
             <h2>Ndubuisi Jr Blog</h2>
