@@ -8,8 +8,11 @@ import { renderToString } from 'react-dom/server';
 export class HtmlHelper {
     public static GetBaseHtml (): Promise<string> {
         return new Promise((resolve, reject)=>{
+            if(this.baseHtml)
+                return resolve(this.baseHtml);
+                
             const htmlPath: string = path.join(process.cwd(),'build','index.html');
-            readFile(htmlPath, 'utf-8', (err, data:string)=>{
+            readFile(htmlPath, 'utf-8', (err, data:string) =>{
                 if(err){   
                     return reject(err);
                 }
@@ -26,4 +29,6 @@ export class HtmlHelper {
         );
         return data;
     }
+
+    private static baseHtml: (string|null) = null;
 }

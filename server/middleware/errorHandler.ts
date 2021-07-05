@@ -6,18 +6,15 @@ import { HtmlHelper } from '../utils/htmlHelper';
 import { InternalError } from '../../src/pages/internalError';
 
 export class ErrorHandler {
-    constructor(){
-        this.config = new Config();
-    }
 
-    ErrorPageHandler(){
+    static ErrorPageHandler(){
         return async (req:Request, res:Response):Promise<Response<string,Record<string,any>>> => {
             const errorPage = await HtmlHelper.InsertComponent(InternalError);
             return res.status(500).send(errorPage);
         }
     }
 
-    Logger(){
+    static Logger(){
         return async (error:any, req:Request, res:Response, next:NextFunction): Promise<void>  => {
             const status = error.status || error.statusCode || 500;
             const stack =
@@ -35,7 +32,7 @@ export class ErrorHandler {
         }
     }
 
-    LogToDisk (stringData:string){
+    static LogToDisk (stringData:string){
         return new Promise<boolean>((resolve, reject)=> {
             appendFile(this.filePath, '\n'+`${new Date().toISOString()}-${stringData}`,
             err =>{
@@ -52,6 +49,6 @@ export class ErrorHandler {
         })
     }
 
-    readonly config: Config;
-    readonly filePath: string = join(process.cwd(),'logs.txt');
+    static readonly config: Config = new Config();
+    static readonly filePath: string = join(process.cwd(),'logs.txt');
 }
