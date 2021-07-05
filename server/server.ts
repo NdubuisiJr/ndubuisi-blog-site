@@ -7,10 +7,8 @@ import { NotFoundHandler } from './middleware/notfound';
 const server: Application = express(); 
 const config: Config = new Config(); 
 
-server.use(express.static('build'));
-
 server.use(routes);
-
+server.use(express.static('build')); 
 server.use(NotFoundHandler.Notfound());
 server.use(ErrorHandler.Logger());
 

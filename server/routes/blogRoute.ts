@@ -4,7 +4,7 @@ import { BlogController } from "../controller/blogController";
 const router: Router = Router();
 
 router
-    .route('/blog')
+    .route('/')
     .get(BlogController.BlogTimeLine);
 
 export default router;
