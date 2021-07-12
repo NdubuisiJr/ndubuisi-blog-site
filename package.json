@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/server/server.js",
+    "build-prod": "rm -rf && cd server && tsc",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
     "dev": "nodemon --exec \"npm run build\" src/index.tsx",
     "serve": "nodemon --exec \"./node_modules/.bin/ts-node\" --ext js,jsx,ts,tsx --watch src server/server.ts"
