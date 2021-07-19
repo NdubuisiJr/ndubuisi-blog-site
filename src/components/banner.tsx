@@ -1,8 +1,10 @@
 import { FunctionComponent } from 'react';
+import { TopNavBar } from './topNavBar';
 
 export const Banner: FunctionComponent = () => {
     return (
-        <div className="banner">
+        <section className="banner" id="banner">
+            <TopNavBar />
             <div className="content">
                 <h3>Hello, I'm</h3>
                 <h2>Ndubuisi Jr Chukuigwe</h2>
@@ -18,6 +20,6 @@ export const Banner: FunctionComponent = () => {
                 <a href="#skills-section">View Skillset</a>
                 <a href="#contact-section">Contact Me</a>
             </div>
-        </div>
+        </section>
     );
 };

@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 export const Portfolio: FunctionComponent = () => {
     return (
-        <section className="portfolio">
+        <section className="portfolio" id="portfolio">
             <div className="title">
                 <h2>My Portfolio</h2>
                 <hr />
