@@ -50,7 +50,7 @@ export const Skillset: FunctionComponent = () => {
                 </div>
                 <div className="skill">
                     <div className="info">
-                        <span>Javascript</span>
+                        <span>Javascript/Typescript</span>
                     </div>
                     <div className="progress-bar js">
                         <span></span>
