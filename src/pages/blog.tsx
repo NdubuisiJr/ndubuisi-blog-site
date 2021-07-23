@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { ArticleCard } from '../components/articleCard';
+import { Footer } from '../components/footer';
 import { TopNavBar } from '../components/topNavBar';
 
 export const Blog: FunctionComponent = () => {
@@ -61,6 +62,7 @@ export const Blog: FunctionComponent = () => {
                 <div className="row row-1"></div>
                 <div className="row row-2"></div>
             </div>
+            <Footer/>
         </div>
     );
 };
