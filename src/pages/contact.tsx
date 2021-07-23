@@ -48,7 +48,7 @@ export const Contact: FunctionComponent = () => {
                         </div>
                         <button>Send Message</button>
                     </form>
-                    <img src="images/ph-city.png" alt="ph map" />
+                    <img src="images/ph-city.PNG" alt="ph map" />
                 </div>
                 <div className="contact-icons">
                     <ContactIcon

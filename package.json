@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node dist/server/server.js",
     "build-prod": "rm -rf && cd server && tsc",
+    "build-img": "docker build -t ndubuisijr/ndubuisijr .",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
     "dev": "nodemon --exec \"npm run build\" src/index.tsx",
     "serve": "nodemon --exec \"./node_modules/.bin/ts-node\" --ext js,jsx,ts,tsx --watch src --watch server server/server.ts"
