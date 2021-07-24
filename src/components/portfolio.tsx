@@ -4,11 +4,11 @@ import { Experience } from './experience';
 export const Portfolio: FunctionComponent = () => {
     return (
         <section className="portfolio" id="portfolio">
-            <div className="title">
+            <header className="title">
                 <h2>Notable Projects and Open source contribution</h2>
                 <hr />
-            </div>
-            <div className="projects">
+            </header>
+            <section className="projects">
                 <Experience
                     title={'Fluent SMS'}
                     description={
@@ -64,7 +64,7 @@ export const Portfolio: FunctionComponent = () => {
                     imageUrl={'images/nuget.png'}
                     link={'https://github.com/aalhour/C-Sharp-Algorithms'}
                 />
-            </div>
+            </section>
         </section>
     );
 };

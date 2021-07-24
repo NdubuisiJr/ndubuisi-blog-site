@@ -5,9 +5,9 @@ export const Banner: FunctionComponent = () => {
     return (
         <section className="banner" id="banner">
             <TopNavBar />
-            <div className="content">
+            <article className="content">
                 <h3>Hello, I'm</h3>
-                <h2>Ndubuisi Jr Chukuigwe</h2>
+                <h1>Ndubuisi Jr Chukuigwe</h1>
                 <span>I'm a Full Stack Software Developer</span>
                 <p>
                     I help businesses and Individuals to develop highly
@@ -19,7 +19,7 @@ export const Banner: FunctionComponent = () => {
                 </p>
                 <a href="#skills-section">View Skillset</a>
                 <a href="/contact">Contact Me</a>
-            </div>
+            </article>
         </section>
     );
 };

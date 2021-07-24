@@ -12,11 +12,11 @@ export const ContactIcon: FunctionComponent<ContactIconProps> = ({
     value,
 }) => {
     return (
-        <div className='contact-icon'>
+        <article className="contact-icon">
             <i className={`contact-icon fas ${icon}`}></i>
             <div>
                 {subject}: {value}
             </div>
-        </div>
+        </article>
     );
 };

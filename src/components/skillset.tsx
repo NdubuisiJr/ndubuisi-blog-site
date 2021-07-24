@@ -3,11 +3,11 @@ import { FunctionComponent } from 'react';
 export const Skillset: FunctionComponent = () => {
     return (
         <section className="skillset" id="skills-section">
-            <div className="title">
+            <header className="title">
                 <h2>Major Skillset</h2>
                 <hr />
-            </div>
-            <div className="skills">
+            </header>
+            <article className="skills">
                 <div className="skill">
                     <div className="info">
                         <span>C#</span>
@@ -72,7 +72,7 @@ export const Skillset: FunctionComponent = () => {
                         <span></span>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
     );
 };

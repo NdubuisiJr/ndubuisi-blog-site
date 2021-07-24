@@ -14,10 +14,10 @@ export const Experience: FunctionComponent<ExperienceProps> = ({
     link,
 }) => {
     return (
-        <div className="project">
+        <article className="project">
             <h2>{title}</h2>
             <div className="project-content">
-                <img src={imageUrl} alt="work-image" />
+                <img src={imageUrl} alt="experience image" />
                 <div>
                     <p>{description}</p>
                 </div>
@@ -25,6 +25,6 @@ export const Experience: FunctionComponent<ExperienceProps> = ({
             <a href={link} target="_blank">
                 View details
             </a>
-        </div>
+        </article>
     );
 };

@@ -5,10 +5,10 @@ import { TopNavBar } from '../components/topNavBar';
 
 export const Contact: FunctionComponent = () => {
     return (
-        <div className="contact-page">
+        <section className="contact-page">
             <TopNavBar />
-            <div className="contact-page-content">
-                <div className="form-container">
+            <section className="contact-page-content">
+                <section className="form-container">
                     <form>
                         <h1>Contact me</h1>
                         <div className="name-email">
@@ -52,8 +52,8 @@ export const Contact: FunctionComponent = () => {
                         src="images/ph-city.PNG"
                         alt="Port Harcourt pleasure park image"
                     />
-                </div>
-                <div className="contact-icons">
+                </section>
+                <section className="contact-icons">
                     <ContactIcon
                         icon="fa-map-marker"
                         subject="Address"
@@ -74,9 +74,9 @@ export const Contact: FunctionComponent = () => {
                         subject="Twitter"
                         value="@ndubuisijr"
                     />
-                </div>
-            </div>
+                </section>
+            </section>
             <Footer />
-        </div>
+        </section>
     );
 };

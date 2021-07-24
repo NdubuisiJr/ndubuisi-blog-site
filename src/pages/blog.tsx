@@ -5,15 +5,15 @@ import { TopNavBar } from '../components/topNavBar';
 
 export const Blog: FunctionComponent = () => {
     return (
-        <div className="container">
+        <section className="container">
             <TopNavBar />
-            <div className="wrapper">
-                <div className="center-line">
+            <section className="wrapper">
+                <header className="center-line">
                     <a href="#" className="scroll-icon">
                         <i className="fas fa-caret-up"></i>
                     </a>
-                </div>
-                <div className="row row-1">
+                </header>
+                <section className="row row-1">
                     <ArticleCard
                         title="Server side Rendered React with node and typescript"
                         date="01/08/2021"
@@ -27,8 +27,8 @@ export const Blog: FunctionComponent = () => {
                             voluptas eius dolore maxime libero enim quam quos
                             eum praesentium."
                     />
-                </div>
-                <div className="row row-2">
+                </section>
+                <section className="row row-2">
                     <ArticleCard
                         title="Server side Rendered React with node and typescript"
                         date="01/08/2021"
@@ -42,8 +42,8 @@ export const Blog: FunctionComponent = () => {
                             voluptas eius dolore maxime libero enim quam quos
                             eum praesentium."
                     />
-                </div>
-                <div className="row row-1">
+                </section>
+                <section className="row row-1">
                     <ArticleCard
                         title="Server side Rendered React with node and typescript"
                         date="01/08/2021"
@@ -57,12 +57,12 @@ export const Blog: FunctionComponent = () => {
                             voluptas eius dolore maxime libero enim quam quos
                             eum praesentium."
                     />
-                </div>
-                <div className="row row-2"></div>
-                <div className="row row-1"></div>
-                <div className="row row-2"></div>
-            </div>
-            <Footer/>
-        </div>
+                </section>
+                <section className="row row-2"></section>
+                <section className="row row-1"></section>
+                <section className="row row-2"></section>
+            </section>
+            <Footer />
+        </section>
     );
 };
