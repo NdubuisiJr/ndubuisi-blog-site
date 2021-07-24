@@ -5,7 +5,8 @@ import { Home } from '../../src/pages/home';
 export class HomeController {
     public static async Homepage(req:Request, res:Response, next:NextFunction): Promise<Response<string,Record<string,any>> | void> {
         try {
-            const homePage: string = await HtmlHelper.InsertComponent(Home);
+            let homePage: string = await HtmlHelper.InsertComponent(Home);
+            homePage = HtmlHelper.InsertTitle(homePage, "Home");
             return res.send(homePage);
         } catch (error) {
            return next(error);

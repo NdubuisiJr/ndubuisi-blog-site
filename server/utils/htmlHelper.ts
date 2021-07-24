@@ -13,20 +13,24 @@ export class HtmlHelper {
                 
             const htmlPath: string = path.join(process.cwd(),'build','index.html');
             readFile(htmlPath, 'utf-8', (err, data:string) =>{
-                if(err){   
+                if(err)   
                     return reject(err);
-                }
                 return resolve(data);
             });
         })
     }
 
     public static async InsertComponent(component: FunctionComponent) : Promise<string> {
-        const html = await HtmlHelper.GetBaseHtml();
-        var data = html.replace(
+        const html: string = await HtmlHelper.GetBaseHtml();
+        var data: string = html.replace(
             '<div id="root"></div>',
             `<div id="root">${renderToString(createElement(component))}</div>`
         );
+        return data;
+    }
+
+    public static InsertTitle(page: string, title: string): string {
+        const data: string = page.replace('{{title}}', title);
         return data;
     }
 
