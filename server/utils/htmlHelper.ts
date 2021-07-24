@@ -1,4 +1,3 @@
-
 import path from 'path';
 import { FunctionComponent } from "react";
 import { readFile } from "fs";
@@ -31,6 +30,11 @@ export class HtmlHelper {
 
     public static InsertTitle(page: string, title: string): string {
         const data: string = page.replace('{{title}}', title);
+        return data;
+    }
+
+    public static InsertDescription(page:string, description: string): string {
+        const data: string = page.replace('{{meta-description}}', description);
         return data;
     }
 

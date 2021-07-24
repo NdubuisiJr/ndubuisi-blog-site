@@ -3,7 +3,6 @@ import { Banner } from '../components/banner';
 import { Footer } from '../components/footer';
 import { Skillset } from '../components/skillset';
 import { Portfolio } from '../components/portfolio';
-import { EmailContact } from '../components/emailContact';
 
 export const Home: FunctionComponent = () => {
     return (
@@ -12,7 +11,6 @@ export const Home: FunctionComponent = () => {
                 <Banner />
                 <Skillset />
                 <Portfolio />
-                {/* <EmailContact /> */}
                 <Footer />
             </main>
         </>

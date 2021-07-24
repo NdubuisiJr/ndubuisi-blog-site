@@ -18,7 +18,7 @@ export const Banner: FunctionComponent = () => {
                     sets below
                 </p>
                 <a href="#skills-section">View Skillset</a>
-                <a href="#contact-section">Contact Me</a>
+                <a href="/contact">Contact Me</a>
             </div>
         </section>
     );

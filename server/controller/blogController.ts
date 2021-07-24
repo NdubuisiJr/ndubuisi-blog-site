@@ -8,6 +8,11 @@ export class BlogController {
         try {
             let blogPage:string = await HtmlHelper.InsertComponent(Blog);
             blogPage = HtmlHelper.InsertTitle(blogPage, "Blog");
+            blogPage = HtmlHelper.InsertDescription(blogPage,
+                `This is a complete timeline of blog posts published by Ndubuisi Jr Chukuigwe. 
+                Many of which are best practices, fixes, cheats, and hacks employed to solve everyday
+                programming challanges.`
+            );
             return res.status(200).send(blogPage);
         } catch (error) {
            return next(error);

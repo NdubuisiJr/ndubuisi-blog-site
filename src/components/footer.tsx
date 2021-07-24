@@ -28,22 +28,34 @@ export const Footer: FunctionComponent = () => {
                     <h4>Let's connect </h4>
                     <ul className="social-media">
                         <li>
-                            <a href="https://facebook.com/ndubuisijunior">
+                            <a
+                                href="https://facebook.com/ndubuisijunior"
+                                target="_blank"
+                            >
                                 <i className="fab fa-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/ndubuisijr">
+                            <a
+                                href="https://github.com/ndubuisijr"
+                                target="_blank"
+                            >
                                 <i className="fab fa-github"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/ndubuisi-jr-chukuigwe-278417145/">
+                            <a
+                                href="https://www.linkedin.com/in/ndubuisi-jr-chukuigwe-278417145/"
+                                target="_blank"
+                            >
                                 <i className="fab fa-linkedin"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/ndubuisijr">
+                            <a
+                                href="https://twitter.com/ndubuisijr"
+                                target="_blank"
+                            >
                                 <i className="fab fa-twitter"></i>
                             </a>
                         </li>

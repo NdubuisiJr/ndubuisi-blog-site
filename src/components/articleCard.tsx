@@ -21,7 +21,7 @@ export const ArticleCard: FunctionComponent<articleCardProps> = ({
 }) => {
     return (
         <section className="article-card">
-            <img src={imageUrl} alt="articleCardImage" />
+            <img src={imageUrl} alt="article Image" />
             <div>
                 <i className={`icon fas ${icon}`}></i>
                 <div className="details">

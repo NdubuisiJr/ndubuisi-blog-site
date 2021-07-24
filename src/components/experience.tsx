@@ -22,7 +22,9 @@ export const Experience: FunctionComponent<ExperienceProps> = ({
                     <p>{description}</p>
                 </div>
             </div>
-            <a href={link}>View details</a>
+            <a href={link} target="_blank">
+                View details
+            </a>
         </div>
     );
 };

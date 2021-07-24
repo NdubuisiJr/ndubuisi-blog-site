@@ -7,6 +7,9 @@ export default class ContactController {
         try {
             let contactPage:string = await HtmlHelper.InsertComponent(Contact);
             contactPage = HtmlHelper.InsertTitle(contactPage, "Contact");
+            contactPage = HtmlHelper.InsertDescription(contactPage,
+                `This contains all of the informations required to contact or reach out to me`
+            );
             return res.status(200).send(contactPage);
         } catch (error) {
             return next(error);
