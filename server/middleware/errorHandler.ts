@@ -9,7 +9,9 @@ export class ErrorHandler {
 
     static ErrorPageHandler(){
         return async (req:Request, res:Response):Promise<Response<string,Record<string,any>>> => {
-            const errorPage = await HtmlHelper.InsertComponent(InternalError);
+            let errorPage = await HtmlHelper.InsertComponent(InternalError);
+            errorPage = HtmlHelper.InsertDescription(errorPage, "Something really bad happened. We are fixing it");
+            errorPage = HtmlHelper.InsertTitle(errorPage, "500 - Internal server error");
             return res.status(500).send(errorPage);
         }
     }

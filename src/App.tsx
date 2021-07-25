@@ -16,7 +16,7 @@ export const App: FunctionComponent = () => {
                     <Route path="/blog" component={Blog} exact />
                     <Route path="/contact" component={Contact} exact />
                     <Route path="/error" component={InternalError} exact />
-                    <Route path="/blog/:id" component={BlogPage} exact />
+                    {/* <Route path="/blog/:id" component={BlogPage} exact /> */}
                     <Route component={NotFound} />
                 </Switch>
             </>
