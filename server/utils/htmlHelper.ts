@@ -22,8 +22,8 @@ export class HtmlHelper {
     public static async InsertComponent(component: FunctionComponent) : Promise<string> {
         const html: string = await HtmlHelper.GetBaseHtml();
         var data: string = html.replace(
-            '<div id="root"></div>',
-            `<div id="root">${renderToString(createElement(component))}</div>`
+            '<main id="root"></main>',
+            `<main id="root">${renderToString(createElement(component))}</main>`
         );
         return data;
     }
