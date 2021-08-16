@@ -69,7 +69,17 @@ export const Blog: FunctionComponent = () => {
                         it on a containerized nginx webisite"
                     />
                 </section>
-                <section className="row row-1"></section>
+                <section className="row row-1">
+                    <ArticleCard
+                        title="Expectations for HNG internship"
+                        date="16/08/2021"
+                        icon="fa-book"
+                        link="/blog/expections-for-hng-internship"
+                        imageUrl="images/hngi.PNG"
+                        author="Ndubuisi Jr Chukuigwe"
+                        description="My number one goal for HNGi is to connect deeply with the software development ecosystem in Nigeria and across Africa. The current HNG internship boosts of over 7 thousand participants. I'm very sure there are future industry leaders, tech evangelists, CEOs and change ministers in the HNGi workspace right now."
+                    />
+                </section>
                 <section className="row row-2"></section>
             </section>
             <Footer />

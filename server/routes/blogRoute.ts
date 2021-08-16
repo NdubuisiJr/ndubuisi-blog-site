@@ -7,4 +7,9 @@ router
     .route('/')
     .get(BlogController.BlogTimeLine);
 
+router
+    .route('/:title')
+    .get(BlogController.RenderBlog);
+
+
 export default router;

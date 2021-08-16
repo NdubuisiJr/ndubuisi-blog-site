@@ -1,9 +1,46 @@
-import { FunctionComponent } from "react";
-import { useParams } from "react-router-dom";
+import { FunctionComponent } from 'react';
+import { useParams } from 'react-router-dom';
+import { TopNavBar } from '../components/topNavBar';
 
-export const BlogPage: FunctionComponent = () => {
+interface BlogData {
+    imageUrl: string;
+    title: string;
+    author: {
+        name: string;
+        imageUrl: string;
+    };
+    paragraphs: [
+        {
+            links?: [
+                {
+                    key: string;
+                    title: string;
+                    url: string;
+                }
+            ];
+            list?: [
+                {
+                    title: string;
+                    link: string;
+                }
+            ];
+            imageUrl?: string;
+            title?: string;
+            text?: string;
+        }
+    ];
+}
+
+export const BlogPage: FunctionComponent<BlogData> = ({
+    imageUrl,
+    title,
+    author,
+    paragraphs,
+}) => {
     const id = useParams();
     return (
-        <div>ID: {id}</div>
+        <section className="blog-page">
+            <TopNavBar />
+        </section>
     );
 };

@@ -1,12 +1,14 @@
 import { FunctionComponent } from 'react';
+import { AuthorIcon } from './authorIcon';
 
 export const TopNavBar: FunctionComponent = () => {
     return (
         <header className="header">
-            <a href="/" className="logo">
-                <img src="images/nd-avatar.png" alt="" />
-                <h6>Ndubuisi Junior</h6>
-            </a>
+            <AuthorIcon
+                imageUrl="/images/nd-avatar.png"
+                name="Ndubuisi Jr"
+                profileLink="/"
+            />
             <ul className="navigation">
                 <li>
                     <a className="active" href="/">

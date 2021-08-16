@@ -5,6 +5,17 @@ import { createElement } from 'react';
 import { renderToString } from 'react-dom/server';
 
 export class HtmlHelper {
+
+        public static ReadJson (path: string): Promise<string> {
+        return new Promise((resolve, reject)=>{
+            readFile(path, 'utf-8', (err, data:string) =>{
+                if(err)   
+                    return reject(err);
+                return resolve(data);
+            });
+        })
+    }
+
     public static GetBaseHtml (): Promise<string> {
         return new Promise((resolve, reject)=>{
             if(this.baseHtml)
@@ -19,7 +30,7 @@ export class HtmlHelper {
         })
     }
 
-    public static async InsertComponent(component: FunctionComponent) : Promise<string> {
+    public static async InsertComponent<T>(component: FunctionComponent<T|{}>, data?: T) : Promise<string> {
         const html: string = await HtmlHelper.GetBaseHtml();
         var data: string = html.replace(
             '<main id="root"></main>',
