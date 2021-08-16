@@ -1,0 +1,56 @@
+{
+    "expections-for-hng-internship":{
+        "imageUrl":"/imges/hngi.PNG",
+        "title":"Expections for HNG internship",
+        "author":{
+            "name":"Ndubuisi Jr Chukuigwe",
+            "imageUrl":"/images/nd-avatar.png"
+        },
+        "paragraphs":[
+            {
+                "links":[
+                    {
+                        "key":"#link1",
+                        "title":"website",
+                        "url":"https://hng.tech/about"
+                    },
+                    {
+                        "key":"#link2",
+                        "title":"the zuri team",
+                        "url":"https://zuri.team"
+                    }
+                ],
+                "title":"What is HNG Internship?",
+                "texts":"According to the official #link1, HNG internship, also known as HNGi, is a 3-month remote internship designed to find and develop the most talented software developers. Anyone can log into the internship using their laptop. Each week, tasks are given to the interns. Those who complete them will advance to the next stage. The intern coders are introduced to complex programming frameworks, and get to work on real world software. The finalists are connected to the best companies in the tech ecosystem and get full time jobs and contracts immediately. The internship is managed by #link2, which also provides amazing opportunity to learn and grow a successful career in the tech space. This internship provides a great opportunity to work on real world solutions to everyday problems using an array of modern day technologies. "
+            },
+            {
+
+                "title":"",
+                "texts":"The technologies used in HNGi ranges from UI/UX design tools like Figma, to source control tools like git and github, to frontend technologies and frameworks like html, css, javascript, and React.js, to kickass backend technologies in go, python, php, javascript (Node), etc. The following list shows some of the technologies used and links leading to video toturials for each: ",
+                "list": [
+                    {
+                        "title":"Git and GitHub for Beginners - Crash Course",
+                        "link":"https://www.youtube.com/watch?v=RGOj5yH7evk"
+                    },
+                    {
+                        "title":"Introduction To Figma | FREE COURSE",
+                        "link":"https://www.youtube.com/watch?v=g6rQFP9zCAM"
+                    },
+                    {
+                        "title":"HTML Tutorial for Beginners: HTML Crash Course [2021]",
+                        "link":"https://www.youtube.com/watch?v=qz0aGYrrlhU"
+                    },
+                    {
+                        "item":"Node",
+                        "title":"Node.js Crash Course",
+                        "link":"https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+                    }
+                ]
+            },
+            {
+                "title":"My Goals",
+                "texts":"My number one goal for HNGi is to connect deeply with the software development ecosystem in Nigeria and across Africa. The current HNG internship boosts of over 7 thousand participants. I'm very sure there are future industry leaders, tech evangelists, CEOs and change ministers in the HNGi workspace right now. Working in a large team is somewhat a struggle for many, managing large software projects is also a lot of pain, my other goal is to gain very useful experience in this light and to learn as much as I can while working with a lot of smart folks. I can't end this article without stating that, I also want to win The HNGi T-shirt 😊, which signifies quality work, grit, teamwork, and the ability to work under pressure and tight deadlines."
+            }
+        ]
+    }
+}
