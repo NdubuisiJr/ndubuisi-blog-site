@@ -6,7 +6,7 @@ export const TopNavBar: FunctionComponent = () => {
         <header className="header">
             <AuthorIcon
                 imageUrl="/images/nd-avatar.png"
-                name="Ndubuisi Jr"
+                name="Ndubuisi"
                 profileLink="/"
             />
             <ul className="navigation">

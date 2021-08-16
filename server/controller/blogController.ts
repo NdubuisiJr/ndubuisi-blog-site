@@ -2,13 +2,13 @@ import { Request, Response } from "express";
 import { NextFunction } from "express-serve-static-core";
 import { HtmlHelper } from "../utils/htmlHelper";
 import { Blog } from '../../src/pages/blog';
-import { BlogPage } from '../../src/pages/BlogPage';
+import { BlogData, BlogPage } from '../../src/pages/BlogPage';
 import path from "path";
 
 export class BlogController {
     public static async BlogTimeLine(req:Request, res:Response, next:NextFunction): Promise<Response<string,Record<string,any>>|void> {
         try {
-            let blogPage:string = await HtmlHelper.InsertComponent(Blog);
+            let blogPage:string = await HtmlHelper.InsertComponent(Blog); 
             blogPage = HtmlHelper.InsertTitle(blogPage, "Blog");
             blogPage = HtmlHelper.InsertDescription(blogPage,
                 `This is a complete timeline of blog posts published by Ndubuisi Jr Chukuigwe. 
@@ -33,7 +33,12 @@ export class BlogController {
             if(!blog)
                 return next();
             
-            let blogPage: string = await HtmlHelper.InsertComponent<BlogData>(BlogPage);
+            let blogPage: string = await HtmlHelper.InsertComponentOf<BlogData>(BlogPage, blog); 
+            blogPage = HtmlHelper.InsertTitle(blogPage, blog.title); 
+            blogPage = HtmlHelper.InsertDescription(blogPage,
+                `My number one goal for HNGi is to connect deeply with the software development ecosystem in Nigeria and across Africa. The current HNG internship boosts of over 7 thousand participants. I'm very sure there are future industry leaders, tech evangelists, CEOs and change ministers in the HNGi workspace right now.`
+            );
+            return res.status(200).send(blogPage);
         } catch (error) {
             return next(error);
         }

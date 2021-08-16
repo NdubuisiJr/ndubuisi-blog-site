@@ -29,8 +29,17 @@ export class HtmlHelper {
             });
         })
     }
+    
+    public static async InsertComponentOf<T>(component: FunctionComponent<T>, props?: T) : Promise<string> {
+        const html: string = await HtmlHelper.GetBaseHtml();
+        var data: string = html.replace(
+            '<main id="root"></main>',
+            `<main id="root">${renderToString(createElement(component, props))}</main>`
+        );
+        return data;
+    }
 
-    public static async InsertComponent<T>(component: FunctionComponent<T|{}>, data?: T) : Promise<string> {
+    public static async InsertComponent(component: FunctionComponent) : Promise<string> {
         const html: string = await HtmlHelper.GetBaseHtml();
         var data: string = html.replace(
             '<main id="root"></main>',
