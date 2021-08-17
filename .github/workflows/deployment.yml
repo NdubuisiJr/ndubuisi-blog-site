@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
+      - name: install dependencies
+        run: npm install
       - name: build client
         run: npm run build
       - name: build server
