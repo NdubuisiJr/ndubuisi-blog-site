@@ -1,0 +1,26 @@
+
+name: deployment
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.0
+      - name: build client
+        run: npm run build
+      - name: build server
+        run: npm run build-prod
+      - name: build image and push to dockerhub
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: ndubuisijr/ndubuisijr
+          tags: latest
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
